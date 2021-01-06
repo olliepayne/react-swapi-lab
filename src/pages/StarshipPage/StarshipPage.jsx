@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { getAllStarships } from '../../services/sw-api'
-import Starship from '../../components/Starship'
 
 class StarshipPage extends Component {
   state = {
