@@ -9,10 +9,17 @@ function App() {
   return (
     <>
       <Route
-        exact path='/starship'
-        render={() => <StarshipPage />}
+        exact path='/'
+        render={() => <StarshipList />}
       />
-      <StarshipList />
+      <Route
+        exact path='/starship'
+        render={({location}) => 
+          <StarshipPage 
+            location={location}
+          />
+        }
+      />
     </>
   )
 }

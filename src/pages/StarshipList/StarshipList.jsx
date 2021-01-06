@@ -15,6 +15,7 @@ class StarshipList extends Component {
   render() {
     return (
       <div>
+        <h1>Starships</h1>
         {this.state.results.length > 0 ?
         <div className="icon-container">
           {this.state.results.map((starship) => (

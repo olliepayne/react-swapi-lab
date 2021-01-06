@@ -1,19 +1,23 @@
 import React, { Component } from 'react'
+import { getDetails } from '../../services/sw-api'
 
 class StarshipPage extends Component {
   state = {
-    results: []
+    url: this.props.location.state.starship.url, 
+    starshipDetails: {}
   }
 
   async componentDidMount() {
-    // API Call
-    // Set state
+    const starshipDetails = await getDetails(this.state.url)
+    this.setState({starshipDetails})
   }
 
   render() {
+    const {starshipDetails} = this.state
+
     return (
       <div>
-        
+        {starshipDetails.name}
       </div>
     )
   }
