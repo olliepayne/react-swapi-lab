@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react'
+import StarshipList from './pages/StarshipList/StarshipList'
+import { Route } from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <StarshipList />
     </>
   )
 }
