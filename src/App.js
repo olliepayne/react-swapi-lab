@@ -10,7 +10,7 @@ function App() {
     <>
       <Route
         exact path='/starship'
-        render={({location}) => <StarshipPage />}
+        render={() => <StarshipPage />}
       />
       <StarshipList />
     </>
