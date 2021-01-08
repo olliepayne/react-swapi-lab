@@ -36,20 +36,6 @@ class StarshipPage extends Component {
             Return
           </Link>
         </div>
-
-        {/* <label>Name: </label>
-        {starshipDetails.name}
-        <br></br>
-        <label>Model: </label>
-        {starshipDetails.model}
-        <br></br>
-        <Link
-          to={{
-            pathname: '/'
-          }}
-        >
-          Return
-        </Link> */}
       </div>
     )
   }
