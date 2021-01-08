@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { getAllStarships } from '../../services/sw-api'
 import { Link } from 'react-router-dom'
+import { wrap } from 'module'
 
 class StarshipList extends Component {
   state = {
@@ -22,7 +23,7 @@ class StarshipList extends Component {
         this.state.results.map((starship, index) => (
           <div
             key={index}
-            style={{textAlign: 'center'}}
+            style={{display: 'flex', justifyContent: 'center'}}
           >
             <button type="button" class="btn btn-secondary" style={{margin: '5px 0'}}>
               <Link
@@ -39,7 +40,7 @@ class StarshipList extends Component {
         ))
         :
         <>
-          <p>Loading starships...</p>
+          <p style={{textAlign: 'center'}}>Loading starships...</p>
         </>
         }
       </div>

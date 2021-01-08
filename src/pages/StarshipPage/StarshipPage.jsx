@@ -19,7 +19,25 @@ class StarshipPage extends Component {
 
     return (
       <div>
-        <label>Name: </label>
+        <header style={{textAlign: 'center', backgroundColor: '#294952', color: 'white'}}>
+          <h1>STAR WARS STARSHIPS</h1>
+        </header>
+
+        <div style={{textAlign: 'center'}}>
+          <label>Name:  {starshipDetails.name}</label>
+          <br></br>
+          <label>Model: {starshipDetails.model}</label>
+          <br></br>
+          <Link
+            to={{
+              pathname: '/'
+            }}
+          >
+            Return
+          </Link>
+        </div>
+
+        {/* <label>Name: </label>
         {starshipDetails.name}
         <br></br>
         <label>Model: </label>
@@ -31,7 +49,7 @@ class StarshipPage extends Component {
           }}
         >
           Return
-        </Link>
+        </Link> */}
       </div>
     )
   }
