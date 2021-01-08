@@ -15,20 +15,26 @@ class StarshipList extends Component {
   render() {
     return (
       <div>
-        <h1>Starships</h1>
+        <header style={{textAlign: 'center', backgroundColor: '#294952', color: 'white'}}>
+          <h1>STAR WARS STARSHIPS</h1>
+        </header>
         {this.state.results.length > 0 ?
         this.state.results.map((starship, index) => (
-          <div 
+          <div
             key={index}
+            style={{textAlign: 'center'}}
           >
-            <Link
-              to={{
-                pathname: '/starship',
-                state: {starship}
-              }}
-            >
-            {starship.name}
-            </Link>
+            <button type="button" class="btn btn-secondary" style={{margin: '5px 0'}}>
+              <Link
+                to={{
+                  pathname: '/starship',
+                  state: {starship}
+                }}
+                style={{textDecoration: 'none', color: 'white'}}
+              >
+                {starship.name}
+              </Link>
+            </button>
           </div>
         ))
         :
