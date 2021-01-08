@@ -6,6 +6,7 @@ export function getAllStarships() {
 }
 
 export function getDetails(apiUrl) {
-  return fetch(`${baseUrl}${apiUrl}`)
+  // return fetch(`${baseUrl}${apiUrl}`)
+  return fetch(`${apiUrl}`)
   .then(res => res.json())
 }

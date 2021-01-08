@@ -17,20 +17,20 @@ class StarshipList extends Component {
       <div>
         <h1>Starships</h1>
         {this.state.results.length > 0 ?
-        <div className="icon-container">
-          {this.state.results.map((starship) => (
-            <div id="starshipDiv" key={starship.index}>
-              <Link
-                to={{
-                  pathname: '/starship',
-                  state: {starship}
-                }}
-              >
-              {starship.name}
-              </Link>
-            </div>
-          ))}
-        </div>
+        this.state.results.map((starship, index) => (
+          <div 
+            key={index}
+          >
+            <Link
+              to={{
+                pathname: '/starship',
+                state: {starship}
+              }}
+            >
+            {starship.name}
+            </Link>
+          </div>
+        ))
         :
         <>
           <p>Loading starships...</p>
